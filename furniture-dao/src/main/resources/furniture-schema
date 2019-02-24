@@ -1,0 +1,11 @@
+drop database if exists furniture;
+drop user if exists 'furniture'@'localhost';
+create database furniture default character set utf8mb4 collate utf8mb4_unicode_ci;
+use furniture;
+create user 'furniture'@'localhost' identified by 'furniture123456';
+grant all privileges on furniture.* to 'furniture'@'localhost';
+flush privileges;
+
+-- create user 'furniture' identified by 'furniture123456';
+-- grant all privileges on *.* to 'furniture'@'%' identified by 'furniture123456' with grant option;
+-- flush privileges;
